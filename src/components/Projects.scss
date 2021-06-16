@@ -1,0 +1,54 @@
+.main-proj {
+    min-height: calc(100vh - 244px);
+    max-width: 1400px;
+    min-width: 320px;
+
+    .cells {
+        opacity: 0;
+        animation: fade 1s 1.5s ease-out forwards;
+    }
+
+    .para-proj {
+        opacity: 0;
+        animation: showTitle 1.5s .5s ease-out forwards;
+        animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+        // font-size: 22px;
+        margin-top: 20px;
+    }
+
+    @keyframes fade {
+        to {opacity: 1;}
+    }
+    
+    .title-proj {
+        font-family: "Baloo Tamma 2";
+        font-weight: 500;
+        font-size: 40px;
+    }
+
+    .subtitle-proj {
+        font-family: "Baloo Tamma 2";
+        font-weight: 500;
+        font-size: 20px;
+    }
+
+    .test00 {
+        border-radius: 14px;
+        display: flex;
+        border: 8px solid;
+
+        img {
+            max-width: 100%;
+            border-radius: 6px;
+            pointer-events: none;
+        }
+    }
+
+    .hide {
+        overflow: hidden;
+    }
+    
+    .proj-desc {
+        margin: 20px 0 80px;
+    }
+}

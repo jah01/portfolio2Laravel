@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;500&family=Corben:wght@400;700&display=swap');
+
+$small: 684px;
+$medium: 860px;
+
+$bg1: #EDF1FF;
+$text1: #7C849F;
+$textDark1: #646A80;
+
+* {
+  margin: 0;
+
+  @media screen and (max-width: $small) {
+    .para, .para-proj {
+      font-size: 14px;
+    }
+
+    .para {
+      margin-top: 40px;
+    }
+
+    .items {
+      font-size: 16px;
+      margin-left: 0;
+    }
+    
+    .foot p {
+      font-size: 16px;
+      
+    }
+
+    .navbar h1 {
+      font-size: 18px;
+      display: none;
+    }
+    
+    .navbar .spacer {
+      display: none;
+    }
+
+    .pad, .pad2 {
+      flex: auto;
+    }
+
+    .title {
+      font-size: 46px;
+    }
+
+    .side {
+      display: block;
+      align-items: center;
+
+      .test00 {
+        width: auto;
+      }
+    }
+
+    .main-proj {
+      width: calc(100vw - 160px);
+      margin: 32px auto;
+    }
+
+    .project {
+      margin-top: 80px;
+    }
+
+    .foot .footer-name, .foot .spacer {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: $small + 1) and (max-width: $medium) {
+    .title {
+      font-size: 54px;
+      width: calc(100vw - 76px);
+      margin: 0 auto;
+    }
+
+    .para, .para-proj {
+      font-size: 18px;
+      margin: 40px 40px 0;
+    }
+
+    .para-proj {
+      margin-bottom: 40px;
+    }
+
+    .title-proj, .subtitle-proj {
+      width: calc(100vw - 76px);
+      margin: 0 auto;
+    }
+
+    .main-proj h1 {
+      margin-top: 40px;
+    }
+
+    .home {
+      display: none;
+    }
+
+    .test00 {
+      width: calc(100vw - 92px);
+      margin: 0 auto;
+    }
+
+    .side {
+      display: block;
+      align-items: center;
+
+      .test00 {
+        width: auto;
+      }
+
+      .para {
+        margin: 40px 40px 0;
+      }
+    }
+  }
+
+  @media screen and (min-width: $medium + 1) {
+    .side {
+      display: flex;
+      align-items: center;
+
+      .test00 {
+        max-width: 1384px;
+        min-width: 344px;
+        width: calc(100vw - 76px);
+      }
+
+      .para {
+        margin: 0 40px;
+      }
+    }
+    
+    .para, .para-proj {
+      font-size: 22px;
+      margin: 40px 40px 0;
+    }
+
+    .items {
+      font-size: 24px;
+      margin-left: 32px;
+    }
+
+    .foot p {
+      font-size: 20px;
+    }
+
+    h1 {
+      font-size: 26px;
+    }
+
+    .title {
+      font-size: 60px;
+    }
+
+    .main-proj {
+      width: calc(100vw - 60px);
+      margin: 100px auto;
+    }
+
+    .project {
+      margin-top: 100px;
+    }
+
+    .home {
+      display: none;
+    }
+  }
+}
+
+body {
+  font-family: "Corben";
+  font-weight: 400;
+  color: $text1;
+  background-color: $bg1;
+  overflow-x: hidden;
+}
+
+.App{
+  width: 100vw;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.spacer {
+  flex: auto;
+}
+
+.pad {
+  margin: 0 4px;
+}
+
+.pad2 {
+  margin: 0 16px;
+}
+
+.navbar, .foot {
+  align-items: center;
+  max-width: 1400px;
+  min-width: 320px;
+  width: calc(100vw - 60px);
+  display: flex;
+  margin: 0 auto;
+  height: 80px;
+  border-bottom: 2px solid rgba($text1, .2);
+  user-select: none;
+
+  .items {
+    margin-top: 15px;
+    font-family: "Baloo Tamma 2";
+    font-weight: 400;
+  }
+
+  h1 {
+    font-weight: 400;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      color: $textDark1;
+    }
+  }
+}
+
+.main {
+  min-height: calc(100vh - 244px);
+  max-width: 1400px;
+  min-width: 320px;
+  width: calc(100vw - 60px);
+  margin: 40px auto;
+  display: table;
+}
+
+.main-contents {
+  display: table-cell;
+  vertical-align: middle;
+  margin: auto 0;
+}
+
+.foot {
+  border-bottom: none;
+  border-top: 2px solid rgba($text1, .2);
+
+  font-family: "Baloo Tamma 2";
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.darkLetters {
+  color: $textDark1;
+}
