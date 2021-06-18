@@ -2,7 +2,6 @@
 
 .title {
     opacity: 0;
-    // font-size: 60px;
     animation: showTitle 1.5s ease-out forwards;
     animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
     // animation-timing-function: cubic-bezier(.61,1.21,.76,1.05);
@@ -32,12 +31,12 @@
         transition: transform .75s ease;
 
         path {
-            fill: $text1;
+            fill: var(--text);
         }
 
         &:hover {
             path {
-                fill: $textDark1;
+                fill: var(--text-dark);
             }
         }
 
@@ -63,8 +62,6 @@
 @keyframes showTitle {
     from {
         transform: translateY(200px);
-        // opacity: 0;
-        
     }
     to {
         transform: translateY(0);
