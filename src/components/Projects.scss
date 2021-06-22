@@ -19,15 +19,14 @@
         to {opacity: 1;}
     }
     
-    .title-proj {
+    .title-proj, .subtitle-proj {
         font-family: "Baloo Tamma 2";
         font-weight: 500;
         font-size: 40px;
+        color: var(--text-dark);
     }
 
     .subtitle-proj {
-        font-family: "Baloo Tamma 2";
-        font-weight: 500;
         font-size: 20px;
     }
 
