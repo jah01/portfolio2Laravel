@@ -1,0 +1,33 @@
+networks:
+  proxy:
+    external:
+      name: proxy-network
+
+services:
+  web:
+    image: buckii/web-laravel
+    env_file:
+      - web.vars
+    environment:
+      VIRTUAL_HOST: portfolio.joey.wg.buckeyedev.com
+      VIRTUAL_PORT: 3000
+      CERT_NAME: 'default'
+      HSTS: 'off'
+    expose:
+      - "3000"
+    volumes:
+      - ../:/app
+    networks:
+      - default
+      - proxy
+
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: ${DB_USERNAME}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+volumes:
+  db_data:
