@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::any('/{react_app?}', function () {
     return view('welcome');
-});
+})->where('react_app', '[\/\w\.-]*');
