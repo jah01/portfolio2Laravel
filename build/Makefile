@@ -30,4 +30,4 @@ down:
 	docker-compose down
 
 web-shell:
-	docker exec -it $(COMPOSE_PROJECT_NAME)_web_1 bash
+	docker exec -it --user application $(COMPOSE_PROJECT_NAME)_web_1 bash

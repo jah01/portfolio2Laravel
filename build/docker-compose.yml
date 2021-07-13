@@ -10,13 +10,10 @@ services:
       - web.vars
     environment:
       VIRTUAL_HOST: portfolio.joey.wg.buckeyedev.com
-      VIRTUAL_PORT: 3000
       CERT_NAME: 'default'
       HSTS: 'off'
-    expose:
-      - "3000"
     volumes:
-      - ../:/app
+      - ../src:/app
     networks:
       - default
       - proxy
